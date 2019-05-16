@@ -2,18 +2,13 @@ require 'pry'
 
 def consolidate_cart(cart)
   # code here
-
-  #counts the number of items
-  cart.each_with_index do |item, index|
-    quantity = cart.count(item)
-    key = cart[index].keys
-    key = key.join
+  cart.each_with_index do |item_hash|
+    key = item_hash.keys.join
     #binding.pry
-    #adds count and quantity to cart hash 
-    cart[index][key] = cart[index][key].merge( {:count => quantity} )
-  end
-  
-  cart = cart.uniq
+    item_hash[:count] = cart.count(item_hash)
+    #binding.pry
+  end 
+  cart.uniq
 end
 
 def apply_coupons(cart, coupons)

@@ -2,14 +2,13 @@ require 'pry'
 
 def consolidate_cart(cart)
   # code here
-  newHash = {}
-  cart.each do |item|
+  cart.each_with_object({}) do |item, result|
     item.each do |type, attribute_hash|
-      if newHash[type]
+      if result[type]
         attribute_hash[:count] += 1
       else
         attribute_hash[:count] = 1
-        newHash[type] = attribute_hash
+        result[type] = attribute_hash
       end
     end
   end

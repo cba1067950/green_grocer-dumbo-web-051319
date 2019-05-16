@@ -9,6 +9,7 @@ def consolidate_cart(cart)
       else 
         attribute_hash[:count] += 1
       binding.pry  
+      end
     end
     
   end

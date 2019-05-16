@@ -3,7 +3,7 @@ require 'pry'
 def consolidate_cart(cart)
   # code here
   cart.each_with_object({}) do |item, result|
-    item.each do |type, type|
+    item.each do |type, attribute|
       binding.pry  
     end
     

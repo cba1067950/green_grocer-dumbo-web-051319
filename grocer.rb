@@ -2,14 +2,16 @@ require 'pry'
 
 def consolidate_cart(cart)
   # code here
-  cart.each_with_object do |item_hash|
-    key = item_hash.keys.join
-    #binding.pry
-    #num = cart.count(item_hash)
-    item_hash[key][:count] = cart.count(item_hash)
-   # binding.pry
-  end 
-  cart.uniq
+  cart.each_with_object({})
+
+  # cart.map do |item_hash|
+  #   key = item_hash.keys.join
+  #   #binding.pry
+  #   #num = cart.count(item_hash)
+  #   item_hash[key][:count] = cart.count(item_hash)
+  # # binding.pry
+  # end 
+  # cart.uniq
 end
 
 def apply_coupons(cart, coupons)

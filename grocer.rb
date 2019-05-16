@@ -7,7 +7,7 @@ def consolidate_cart(cart)
     #binding.pry
     #num = cart.count(item_hash)
     item_hash[key][:count] = cart.count(item_hash)
-    binding.pry
+   # binding.pry
   end 
   cart.uniq
 end

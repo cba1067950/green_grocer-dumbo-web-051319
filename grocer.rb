@@ -5,10 +5,10 @@ def consolidate_cart(cart)
   cart.each_with_object({}) do |item, result|
     item.each do |type, attribute_hash|
       if result[type]
-        attribute_hash[:count] = 1
-      else 
-        attribute_hash[:count] + 1
-      binding.pry  
+        attributes[:count] += 1
+      else
+        attributes[:count] = 1
+        result[type] = attributes
       end
     end
     

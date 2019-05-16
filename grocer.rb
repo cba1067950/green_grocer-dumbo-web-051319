@@ -5,7 +5,7 @@ def consolidate_cart(cart)
   cart.each_with_object({}) do |item, result|
     item.each do |type, attribute_hash|
       if result[type]
-        result
+        type
       binding.pry  
     end
     

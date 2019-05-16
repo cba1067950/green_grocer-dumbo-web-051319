@@ -2,9 +2,10 @@ require 'pry'
 
 def consolidate_cart(cart)
   # code here
-  cart.each_with_index do |item_hash|
-    key = item_hash.keys.join
+  cart.map do |item_hash|
+    #key = item_hash.keys.join
     #binding.pry
+    num = cart.count(item_hash)
     item_hash[:count] = cart.count(item_hash)
     binding.pry
   end 

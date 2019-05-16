@@ -7,7 +7,7 @@ def consolidate_cart(cart)
       if result[type]
         attribute_hash[:count] = 1
       else 
-        attribute_hash[:count] += 1
+        attribute_hash[:count] + 1
       binding.pry  
       end
     end

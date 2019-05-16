@@ -2,7 +2,7 @@ require 'pry'
 
 def consolidate_cart(cart)
   # code here
-  cart.each_with_object({})
+  cart.each_with_object({}) do |item, 
 
   # cart.map do |item_hash|
   #   key = item_hash.keys.join

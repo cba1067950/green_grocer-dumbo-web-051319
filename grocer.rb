@@ -3,10 +3,10 @@ require 'pry'
 def consolidate_cart(cart)
   # code here
   cart.map do |item_hash|
-    #key = item_hash.keys.join
+    key = item_hash.keys.join
     #binding.pry
     num = cart.count(item_hash)
-    item_hash[:count] = cart.count(item_hash)
+    item_hash[key][:count] = cart.count(item_hash)
     binding.pry
   end 
   cart.uniq

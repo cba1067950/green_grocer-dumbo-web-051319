@@ -3,8 +3,10 @@ require 'pry'
 def consolidate_cart(cart)
   # code here
   cart.each_with_object({}) do |item, result|
-    item.each
-    binding.pry
+    item.each do |item, type|
+      binding.pry  
+    end
+    
   end
 
   # cart.map do |item_hash|
